@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Ana Novković</title>
     <link rel="stylesheet" href="/src/css/styles.css">
-    <link rel="icon" href="src/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js" loading="lazy"></script>
 </head>
 <body>
@@ -50,7 +50,7 @@
         }
 
         // Initialize header and footer
-        loadHTML('header.html', 'header-container', () => {
+        loadHTML('../html/header.html', 'header-container', () => {
             const themeSwitch = document.getElementById('theme-switch');
             const currentTheme = localStorage.getItem('theme') || 'light';
             document.body.classList.toggle('dark-mode', currentTheme === 'dark');
@@ -65,7 +65,7 @@
 
             updateThemeIcons(); 
         });
-        loadHTML('footer.html', 'footer-container');
+        loadHTML('../html/footer.html', 'footer-container');
     </script>
 </body>
 </html>

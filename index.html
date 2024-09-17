@@ -9,7 +9,25 @@
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js" loading="lazy"></script>
 </head>
 <body>
-    <div id="header-container"></div>
+    <header>
+        <div class="header-container">
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="src/html/about.html">About</a></li>
+                    <li><a href="src/html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <label for="theme-switch" class="toggle-label">
+                    <span id="theme-icon-moon" class="theme-icon">🌙</span>>
+                    <input type="checkbox" id="theme-switch" aria-label="Toggle dark/light mode">
+                    <span class="slider"></span>
+                    <span id="theme-icon-sun" class="theme-icon">🌞</span>
+                </label>
+            </div>            
+        </div>
+    </header>
     <main>
         <div id="content-container">
             <h1>Welcome to <span class="bold-underline">My Web Page</span></h1>
