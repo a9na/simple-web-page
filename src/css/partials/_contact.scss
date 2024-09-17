@@ -1,0 +1,101 @@
+// Contact Form
+.contact-section {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background-color: map-get($light-mode, background-color);
+    margin: 0 auto; 
+    max-width: 800px; 
+
+    h1, p {
+        color: map-get($light-mode, text-color);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px $shadow-color-light;
+        width: 100%;
+        max-width: 500px; 
+        font-family: inherit; 
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: map-get($light-mode, text-color);
+            margin-bottom: 8px;
+            width: 100%;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px $shadow-color-light;
+            font-family: inherit; 
+            transition: box-shadow 0.3s;
+
+            &:focus {
+                box-shadow: 0 4px 8px $shadow-color-medium;
+                outline: none;
+            }
+        }
+
+        button {
+            background-color: map-get($light-mode, button-bg);
+            padding: 12px 20px;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+            font-family: inherit; 
+
+            &:hover {
+                background-color: map-get($light-mode, button-hover-bg);
+            }
+        }
+    }
+
+    .dark-mode & {
+        background-color: map-get($dark-mode, background-color);
+
+        h1, p {
+            color: map-get($dark-mode, button-hover-bg);
+        }
+
+        label {
+            color: map-get($dark-mode, text-color);
+        }
+
+        form {
+            background-color: map-get($dark-mode, header-footer-bg);
+            box-shadow: 0 4px 10px $shadow-color-dark;
+
+            input, textarea {
+                background-color: map-get($dark-mode, header-footer-bg);
+                border: 1px solid map-get($dark-mode, text-color);
+                color: map-get($dark-mode, button-hover-bg);
+                font-family: inherit; 
+            }
+
+            button {
+                background-color: map-get($dark-mode, button-bg);
+
+                &:hover {
+                    background-color: map-get($dark-mode, button-hover-bg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+// About 
+.about-me-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px $shadow-color-light;
+    animation: slideIn 1s ease-out;
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+        box-shadow: 0 4px 10px $shadow-color-light;
+    }
+
+    .about-me-content {
+        max-width: 600px;
+        text-align: left;
+
+        h1 {
+            font-size: 36px;
+            color: map-get($light-mode, header-footer-bg);
+        }
+
+        p {
+            font-size: 18px;
+            color: map-get($light-mode, text-color);
+            line-height: 1.6;
+        }
+    }
+}

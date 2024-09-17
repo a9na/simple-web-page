@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ana Novković</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="icon" href="/src/assets/icons/favicon.ico" type="image/x-icon">
+    <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js" loading="lazy"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="about-me-section">
+            <img src="/src/assets/images/ana-profile.jpg" alt="My profile image" class="profile-pic">
+            <div class="about-me-content">
+                <h1>About Ana Novković</h1>
+                <p>
+                    I'm a Computer Science student at FERIT Osijek, passionate about engineering, programming, and design. I enjoy solving complex problems, tutoring students, volunteering, and staying active through running. When I'm not coding or running, you will find me gaming or learning new design trends.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script defer src="../js/update-icons.js"></script>
+    <script>
+        // Function to load HTML content into a specified element
+        function loadHTML(url, elementId, callback) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    if (callback) callback();
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Initialize header and footer
+        loadHTML('header.html', 'header-container', () => {
+            const themeSwitch = document.getElementById('theme-switch');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+            themeSwitch.checked = (currentTheme === 'dark');
+
+            themeSwitch.addEventListener('change', () => {
+                const newTheme = themeSwitch.checked ? 'dark' : 'light';
+                document.body.classList.toggle('dark-mode', newTheme === 'dark');
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcons(); 
+            });
+
+            updateThemeIcons(); 
+        });
+        loadHTML('footer.html', 'footer-container');
+    </script>
+</body>
+</html>

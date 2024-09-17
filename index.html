@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Web Page</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="icon" href="/src/assets/icons/favicon.ico" type="image/x-icon">
+    <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js" loading="lazy"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <div id="content-container">
+            <h1>Welcome to <span class="bold-underline">My Web Page</span></h1>
+            <p>My internship has been amazing and I am learning a lot!</p>
+            <div id="button-container">
+                <button id="click-me" aria-label="Click me to see a message">Click Me!</button>
+                <div id="message"></div>
+            </div>
+        </div>
+        <div id="tree-container">
+            <canvas id="canvas" width="500" height="500" aria-label="Interactive tree canvas">
+                Canvas is not supported or has been disabled in your browser.
+            </canvas>
+        </div>
+    </main>
+    <div id="footer-container"></div>
+    <script defer src="src/js/button.js"></script>
+    <script defer src="src/js/tree.js"></script>
+    <script defer src="src/js/update-icons.js"></script>     
+    <script>
+        // Function to load HTML content into a specified element
+        function loadHTML(url, elementId, callback) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    if (callback) callback();
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Initialize header and footer
+        loadHTML('src/html/header.html', 'header-container', () => {
+            const themeSwitch = document.getElementById('theme-switch');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+            themeSwitch.checked = (currentTheme === 'dark');
+
+            themeSwitch.addEventListener('change', () => {
+                const newTheme = themeSwitch.checked ? 'dark' : 'light';
+                document.body.classList.toggle('dark-mode', newTheme === 'dark');
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcons(); 
+            });
+
+            updateThemeIcons(); 
+        });
+        loadHTML('src/html/footer.html', 'footer-container');
+    </script>
+</body>
+</html>

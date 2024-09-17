@@ -1,0 +1,48 @@
+// Button 
+#button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+
+button {
+    background-color: map-get($light-mode, button-bg);
+    color: white;
+    border: none;
+    padding: 20px 40px; 
+    font-size: 20px; 
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px $shadow-color-medium;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; 
+    margin-right: 20px; 
+
+    &:hover {
+        background-color: map-get($light-mode, button-hover-bg);
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px $shadow-color-dark;
+    }
+
+    &:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 4px $shadow-color-light;
+    }
+
+    .dark-mode & {
+        background-color: map-get($dark-mode, button-bg);
+
+        &:hover {
+            background-color: map-get($dark-mode, button-hover-bg);
+            color: map-get($dark-mode, text-color);
+        }
+    }
+}
+
+// Message
+#message {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}

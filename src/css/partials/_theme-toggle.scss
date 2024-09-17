@@ -1,0 +1,73 @@
+// Theme Toggle
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80px;
+    height: 40px;
+
+    .toggle-label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        .theme-icon {
+            position: absolute;
+            font-size: 20px;
+            transition: opacity 0.4s;
+            z-index: 1;
+        }
+
+        #theme-icon-moon {
+            right: 50px;
+            opacity: 0;
+        }
+
+        #theme-icon-sun {
+            right: 10px;
+            opacity: 1;
+        }
+
+        input:checked ~ #theme-icon-moon {
+            opacity: 1;
+        }
+
+        input:checked ~ #theme-icon-sun {
+            opacity: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            background-color: map-get($light-mode, button-bg);
+            border-radius: 30px;
+            width: 100%;
+            height: 100%;
+            transition: .4s;
+            z-index: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background-color: white;
+                width: 26px;
+                height: 26px;
+                left: 6px;
+                bottom: 6px;
+                transition: .4s;
+            }
+        }
+
+        input:checked + .slider {
+            background-color: map-get($dark-mode, button-bg);
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(40px);
+        }
+    }
+}

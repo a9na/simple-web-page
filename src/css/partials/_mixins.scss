@@ -1,0 +1,6 @@
+// Mixins
+@mixin mode-theme($theme) {
+    background-color: map-get($theme, background-color);
+    color: map-get($theme, text-color);
+}
+

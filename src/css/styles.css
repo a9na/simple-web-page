@@ -1,0 +1,300 @@
+header {
+  background-color: #004d40;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 1s forwards; }
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+  header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px; }
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; }
+    header nav ul li {
+      margin: 0; }
+    header nav ul a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px; }
+      header nav ul a:hover {
+        color: #b9fbc0; }
+      .dark-mode header nav ul a {
+        color: #000000; }
+        .dark-mode header nav ul a:hover {
+          color: #86fc96; }
+
+footer {
+  background-color: #004d40;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; }
+    footer .footer-content .footer-links {
+      display: flex;
+      gap: 10px; }
+      footer .footer-content .footer-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px; }
+        footer .footer-content .footer-links a:hover {
+          color: #b9fbc0; }
+        .dark-mode footer .footer-content .footer-links a {
+          color: #000000; }
+          .dark-mode footer .footer-content .footer-links a:hover {
+            color: #86fc96; }
+    footer .footer-content .footer-copyright p {
+      font-size: 14px;
+      margin-right: 20px;
+      color: inherit; }
+
+.contact-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #e0f2f1;
+  margin: 0 auto;
+  max-width: 800px; }
+  .contact-section h1, .contact-section p {
+    color: #00796b; }
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    font-family: inherit; }
+    .contact-section form label {
+      display: block;
+      font-size: 16px;
+      color: #00796b;
+      margin-bottom: 8px;
+      width: 100%; }
+    .contact-section form input, .contact-section form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-family: inherit;
+      transition: box-shadow 0.3s; }
+      .contact-section form input:focus, .contact-section form textarea:focus {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        outline: none; }
+    .contact-section form button {
+      background-color: #004d40;
+      padding: 12px 20px;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+      font-family: inherit; }
+      .contact-section form button:hover {
+        background-color: #00251a; }
+  .dark-mode .contact-section {
+    background-color: #2e2c2c; }
+    .dark-mode .contact-section h1, .dark-mode .contact-section p {
+      color: #ffffff; }
+    .dark-mode .contact-section label {
+      color: #000000; }
+    .dark-mode .contact-section form {
+      background-color: #f0e2e2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
+      .dark-mode .contact-section form input, .dark-mode .contact-section form textarea {
+        background-color: #f0e2e2;
+        border: 1px solid #000000;
+        color: #ffffff;
+        font-family: inherit; }
+      .dark-mode .contact-section form button {
+        background-color: #928888; }
+        .dark-mode .contact-section form button:hover {
+          background-color: #ffffff; }
+
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-out; }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+  .about-me-section .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+  .about-me-section .about-me-content {
+    max-width: 600px;
+    text-align: left; }
+    .about-me-section .about-me-content h1 {
+      font-size: 36px;
+      color: #004d40; }
+    .about-me-section .about-me-content p {
+      font-size: 18px;
+      color: #00796b;
+      line-height: 1.6; }
+
+#button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+button {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin-right: 20px; }
+  button:hover {
+    background-color: #00251a;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); }
+  button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  .dark-mode button {
+    background-color: #928888; }
+    .dark-mode button:hover {
+      background-color: #ffffff;
+      color: #000000; }
+
+#message {
+  font-size: 20px;
+  display: flex;
+  align-items: center; }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 40px; }
+  .theme-toggle .toggle-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer; }
+    .theme-toggle .toggle-label .theme-icon {
+      position: absolute;
+      font-size: 20px;
+      transition: opacity 0.4s;
+      z-index: 1; }
+    .theme-toggle .toggle-label #theme-icon-moon {
+      right: 50px;
+      opacity: 0; }
+    .theme-toggle .toggle-label #theme-icon-sun {
+      right: 10px;
+      opacity: 1; }
+    .theme-toggle .toggle-label input:checked ~ #theme-icon-moon {
+      opacity: 1; }
+    .theme-toggle .toggle-label input:checked ~ #theme-icon-sun {
+      opacity: 0; }
+    .theme-toggle .toggle-label .slider {
+      position: absolute;
+      cursor: pointer;
+      background-color: #004d40;
+      border-radius: 30px;
+      width: 100%;
+      height: 100%;
+      transition: .4s;
+      z-index: 0; }
+      .theme-toggle .toggle-label .slider::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        width: 26px;
+        height: 26px;
+        left: 6px;
+        bottom: 6px;
+        transition: .4s; }
+    .theme-toggle .toggle-label input:checked + .slider {
+      background-color: #928888; }
+    .theme-toggle .toggle-label input:checked + .slider::before {
+      transform: translateX(40px); }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f2f1;
+  color: #00796b; }
+  body.dark-mode {
+    background-color: #2e2c2c;
+    color: #000000; }
+  body .bold-underline {
+    font-weight: bold;
+    text-decoration: underline; }
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px; }
+  main #tree-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px; }
+  main #content-container {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px; }
+    main #content-container h1 {
+      color: #004d40;
+      font-size: 48px; }
+    main #content-container p {
+      color: #00796b;
+      font-size: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

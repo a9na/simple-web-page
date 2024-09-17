@@ -1,0 +1,61 @@
+@charset 'utf-8';
+
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/contact';     
+@import 'partials/about';       
+@import 'partials/button';       
+@import 'partials/theme-toggle'; 
+
+// Global Styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    @include mode-theme($light-mode);
+
+    &.dark-mode {
+        @include mode-theme($dark-mode);
+    }
+
+    .bold-underline {
+        font-weight: bold;
+        text-decoration: underline;
+    }    
+}
+
+// Main Content
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+
+    #tree-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px; 
+    }
+
+    #content-container {
+        flex: 1;
+        text-align: center;
+        padding-right: 20px; 
+
+        h1 {
+            color: map-get($light-mode, header-footer-bg);
+            font-size: 48px; 
+        }
+
+        p {
+            color: map-get($light-mode, text-color);
+            font-size: 20px; 
+        }
+    }
+}
+
+

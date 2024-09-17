@@ -1,0 +1,22 @@
+// Variables
+$light-mode: (
+    background-color: #e0f2f1,
+    header-footer-bg: #004d40,
+    button-bg: #004d40,
+    button-hover-bg: #00251a,
+    text-color: #00796b,
+    link-hover-color: #b9fbc0
+);
+
+$dark-mode: (
+    background-color: #2e2c2c,
+    header-footer-bg: #f0e2e2,
+    button-bg: #928888,
+    button-hover-bg: #ffffff,
+    text-color: #000000,
+    link-hover-color: #86fc96
+);
+
+$shadow-color-light: rgba(0, 0, 0, 0.2);
+$shadow-color-medium: rgba(0, 0, 0, 0.3);
+$shadow-color-dark: rgba(0, 0, 0, 0.4);
