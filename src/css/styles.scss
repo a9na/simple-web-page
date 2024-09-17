@@ -40,6 +40,12 @@ main {
         align-items: center;
         padding-left: 20px; 
     }
+    
+    @media (max-width: 768px) {
+        #tree-container {
+            display: none;
+        }
+    }
 
     #content-container {
         flex: 1;
