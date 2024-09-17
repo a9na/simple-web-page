@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Ana Novković</title>
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="icon" href="/src/assets/icons/favicon.ico" type="image/x-icon">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js" loading="lazy"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
 
     <main>
         <section class="about-me-section">
-            <img src="../assets/images/ana-profile.jpg" alt="My profile image" class="profile-pic">
+            <img src="/src/assets/images/ana-profile.jpg" alt="My profile image" class="profile-pic">
             <div class="about-me-content">
                 <h1>About Ana Novković</h1>
                 <p>
@@ -41,7 +41,7 @@
         }
 
         // Initialize header and footer
-        loadHTML('../html/header.html', 'header-container', () => {
+        loadHTML('header.html', 'header-container', () => {
             const themeSwitch = document.getElementById('theme-switch');
             const currentTheme = localStorage.getItem('theme') || 'light';
             document.body.classList.toggle('dark-mode', currentTheme === 'dark');
@@ -56,7 +56,7 @@
 
             updateThemeIcons(); 
         });
-        loadHTML('../html/footer.html', 'footer-container');
+        loadHTML('footer.html', 'footer-container');
     </script>
 </body>
 </html>
