@@ -39,6 +39,7 @@ This project includes:
 
 The project is organized into the following structure:
 
+```
 /project-root
     /src
         /assets
@@ -68,7 +69,7 @@ The project is organized into the following structure:
     README.md
     package.json
     package-lock.json
-
+```
 
 ## Setup Instructions
 
