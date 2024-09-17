@@ -84,8 +84,8 @@ The project is organized into the following structure:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/a9na/my-web-page.git
-    cd my-web-page
+    git clone https://github.com/a9na/simple-web-page.git
+    cd simple-web-page
     ```
 
 2. Install dependencies (if using npm):
