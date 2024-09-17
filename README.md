@@ -1,45 +1,41 @@
-Simple Web Page Project
-Welcome to my Simple Web Page project! This is a simple, interactive website that includes a fractal tree animation, theme switching functionality, and dynamic loading of header and footer components. The project is built with HTML, SCSS, and JavaScript.
+# Simple Web Page Project
 
-Table of Contents
+Welcome to my Simple Web Page project! This interactive website features a fractal tree animation, theme switching functionality, and dynamic loading of header and footer components. Built with HTML, SCSS, and JavaScript, this project demonstrates modular design and modern web practices.
 
-Project Overview
-Features
-Technologies Used
-File Structure
-Setup Instructions
-Usage
+## Table of Contents
 
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [File Structure](#file-structure)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
 
-Project Overview
+## Project Overview
 
-This project is a simple webpage that demonstrates the following:
+This project includes:
 
-A button interaction that triggers a message display.
-A fractal tree animation drawn on an HTML5 <canvas>.
-Theme switching functionality (light/dark mode) with icons for a sun and moon.
-Dynamically loaded header and footer HTML components using JavaScript.
-The project is built using a modular folder structure to organize HTML, CSS, SCSS, and JavaScript files.
+- **Interactive Button**: Triggers a message display on click.
+- **Fractal Tree Animation**: Rendered on an HTML5 `<canvas>`.
+- **Theme Switching**: Toggle between light and dark modes with sun and moon icons.
+- **Dynamic Components**: Header and footer are loaded from external HTML files.
 
+## Features
 
-Features
+- **Theme Switcher**: Toggle between light and dark modes. The state is saved using `localStorage`.
+- **Interactive Button**: Displays a message when clicked.
+- **Fractal Tree Animation**: Drawn using the HTML5 `<canvas>` element.
+- **Modular HTML**: Header and footer are dynamically loaded for modularity.
 
-Theme Switcher: Users can toggle between light and dark modes. The state is persisted using localStorage.
-Interactive Button: A button that displays a message when clicked.
-Fractal Tree Animation: A fractal tree is drawn using the HTML5 <canvas> element.
-Modular HTML: The header and footer are dynamically loaded from external HTML files to maintain modularity.
+## Technologies Used
 
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) **HTML5**: Markup language for webpage structure.
+- ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) **SCSS**: CSS preprocessor for modular and maintainable styles.
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) **JavaScript**: Adds interactivity and animations.
+- **Canvas API**: For drawing the fractal tree animation.
+- **Iconify**: Icon library for theme-related icons (sun and moon).
 
-Technologies Used
-
-HTML5: Markup language used to structure the webpage.
-SCSS (Sassy CSS): Preprocessor to write modular and maintainable CSS.
-JavaScript (ES6): Core scripting language for adding interactivity and animations.
-Canvas API: Used for drawing the fractal tree animation.
-Iconify: Icon library used for theme-related icons (sun and moon).
-
-
-File Structure
+## File Structure
 
 The project is organized into the following structure:
 
@@ -74,57 +70,65 @@ The project is organized into the following structure:
     package-lock.json
 
 
-Setup Instructions
+## Setup Instructions
 
-Prerequisites
+### Prerequisites
 
-To run this project, you need the following installed:
+- A web browser (Google Chrome, Firefox, etc.).
+- (Optional) Node.js and npm for dependency management or local server.
+- (Optional) A local server such as `http-server` or `live-server`.
 
-A web browser (Google Chrome, Firefox, etc.).
-(Optional) Node.js and npm (if using npm for dependency management or running a local server).
-(Optional) A local server such as http-server or live-server.
+### Installation
 
+1. Clone the repository:
 
-Installation
+    ```bash
+    git clone https://github.com/a9na/my-web-page.git
+    cd my-web-page
+    ```
 
-Clone the repository:
+2. Install dependencies (if using npm):
 
-git clone https://github.com/a9na/my-web-page.git
-cd my-web-page
+    ```bash
+    npm install
+    ```
 
-Install dependencies (if using npm):
+3. (Optional) Run a local server:
 
-npm install
+    ```bash
+    npx live-server
+    ```
 
-(Optional) Run a local server:
+4. Open `index.html` in your browser to view the webpage.
 
-npx live-server
+### Compiling SCSS
 
-Open index.html in your browser to view the webpage.
+To compile SCSS to CSS:
 
-Compiling SCSS
+1. Install Sass globally (if not already installed):
 
-If you make changes to the SCSS, you'll need to compile it into CSS. You can do this using the sass command or by using npm scripts if you have node-sass set up.
+    ```bash
+    npm install -g sass
+    ```
 
-Install Sass globally (if you haven't already):
+2. Compile SCSS to CSS:
 
-npm install -g sass
+    ```bash
+    sass src/scss/styles.scss src/css/styles.css
+    ```
 
-Compile the SCSS to CSS:
+## Usage
 
-sass src/scss/styles.scss src/css/styles.css
+### Navigating the Website
 
-Usage
+- **Home Page (index.html)**: Displays a welcome message, interactive button, and fractal tree canvas.
+- **About Page (about.html)**: Basic about page.
+- **Contact Page (contact.html)**: Basic contact page with placeholder information.
 
-Navigating the Website
+### Switching Themes
 
-Home Page (index.html): The homepage displays a welcome message, an interactive button, and a fractal tree canvas.
-About Page (about.html): A basic about page.
-Contact Page (contact.html): A basic contact page with placeholder information.
+Click the theme switcher button in the header to toggle between light and dark modes. The current theme is saved using `localStorage`.
 
-Switching Themes
-Click the theme switcher button in the header to toggle between light and dark modes. The current theme is saved using localStorage so that it persists across sessions.
+### Fractal Tree Animation
 
-Fractal Tree Animation
-The fractal tree is drawn on a <canvas> element. This can be customized or expanded by modifying tree.js.
-
+The fractal tree is drawn on a `<canvas>` element and can be customized or expanded by modifying `tree.js`.
