@@ -3,8 +3,7 @@
 Welcome to my Simple Web Page project! This interactive website features a fractal tree animation, theme switching functionality, and dynamic loading of header and footer components. Built with HTML, SCSS, and JavaScript, this project demonstrates modular design and modern web practices.
 
 
-![Live Demo](https://img.shields.io/badge/Live_Demo-darkgreen?style=for-the-badge&logo=web&logoColor=white)
-
+[![Live Demo](https://img.shields.io/badge/Live_Demo-darkgreen?style=for-the-badge&logo=web&logoColor=white)](https://my-simple-web-page.netlify.app)
 
 ## Table of Contents
 
